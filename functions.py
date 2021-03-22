@@ -66,19 +66,19 @@ async def generate_cover_square(requested_by, title, artist, duration, thumbnail
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 20)
-    draw.text((150, 380), f"Title: {title}", (255, 255, 255), font=font)
-    draw.text((150, 405), f"Artist: {artist}", (255, 255, 255), font=font)
+    draw.text((150, 380), f"Title: {title}", (51, 51, 255), font=font)
+    draw.text((150, 405), f"Artist: {artist}", (51, 51, 255), font=font)
     draw.text(
         (150, 430),
         f"Duration: {duration} Seconds",
-        (255, 255, 255),
+        (51, 51, 255),
         font=font,
     )
 
     draw.text(
         (150, 455),
         f"Played By: {requested_by}",
-        (255, 255, 255),
+        (51, 51, 255),
         font=font,
     )
     img.save("final.png")
@@ -106,14 +106,14 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
+    draw.text((190, 550), f"Title: {title}", (51, 51, 255), font=font)
     draw.text(
-        (190, 590), f"Duration: {duration}", (255, 255, 255), font=font
+        (190, 590), f"Duration: {duration}", (51, 51, 255), font=font
     )
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((190, 630), f"Views: {views}", (51, 51, 255), font=font)
     draw.text((190, 670),
         f"Played By: {requested_by}",
-        (255, 255, 255),
+        (51, 51, 255),
         font=font,
     )
     img.save("final.png")
